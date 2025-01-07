@@ -28,6 +28,12 @@ It showcases my ability to create functional web applications with user authenti
 
 ## Kuinka käyttää
 
-1. Rekisteröidy ja kirjaudu sisään.
+1. Rekisteröidy ja kirjaudu sisään.  
+   Valitse rooli rekisteröityessäsi:  
+   - **Opiskelija**: Hae projekteja ja hae niitä, jotka vastaavat taitojasi ja kiinnostuksen kohteitasi.  
+   - **Projektin tarjoaja**: Voit lisätä ja hallita projekteja, joihin opiskelijat voivat hakea.
+
 2. Etsi projekteja hakutoiminnolla.
-3. Hae projekteja, jotka vastaavat taitojasi ja kiinnostuksen kohteitasi.
+
+3. Hae projekteja, jotka vastaavat taitojasi ja kiinnostuksen kohteitasi (opiskelija) tai tarjoa projekteja (projektin tarjoaja).
+
