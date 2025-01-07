@@ -1,11 +1,11 @@
 # Projektitori
 
-**This project, _Projektitori_, was developed as part of my studies in PHP and MySQL as part of the Omnia Full Stack program.**  
+**This project, _Projektitori_, was developed as part of my studies in PHP and MySQL as part of the Omnia Full Stack program (2024-2025).**  
 It showcases my ability to create functional web applications with user authentication, search functionality, and database integration.
 
 ---
 
-**Projektitori** on PHP- ja MySQL-pohjainen verkkosovellus, joka kehitettiin osana Omnian Full Stack -opintojani. Sovellus tarjoaa käyttäjille mahdollisuuden etsiä ja hakea projekteja eri kategorioista, ja se sisältää käyttäjätunnistuksen sekä hakutoiminnallisuuden.
+**Projektitori** on PHP- ja MySQL-pohjainen verkkosovellus, joka kehitettiin osana Omnian Full Stack -opintojani (2024-2025). Sovellus tarjoaa käyttäjille mahdollisuuden etsiä ja hakea projekteja eri kategorioista, ja se sisältää käyttäjätunnistuksen sekä hakutoiminnallisuuden.
 
 ---
 
