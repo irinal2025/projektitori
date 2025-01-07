@@ -1,0 +1,78 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 10px;
+    color: #333;
+}
+input, select {
+    padding: 10px;
+    /*margin-top: 5px;*/
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button.btn.btn-primary,
+input[type="submit"] {
+    margin: 10px auto 20px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+button.btn.btn-primary:hover,
+input[type="submit"]:hover {
+    background-color: #000;
+    color: #ddd;
+}
+button.btn.btn-primary:disabled,
+.btn.disabled, 
+.btn:disabled, 
+fieldset:disabled .btn {
+    background-color: #343a40;
+    color: gray;
+    opacity: 1;
+    cursor: not-allowed;
+}
+button.btn.btn-primary:disabled:hover,
+.btn.disabled:hover, 
+.btn:disabled:hover, 
+fieldset:disabled .btn:hover {
+    cursor: not-allowed;
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.mb-3 {
+    position: relative;
+}
+
+
+.input-group .input-group-text {
+    border-top-right-radius: 0.375rem !important;
+    border-bottom-right-radius: 0.375rem !important;
+}
+
+.projectform.form-inline {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+/*.projectform.form-inline .col-auto {
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+}*/
+
+.projectform.form-inline .input-group #project_name {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
