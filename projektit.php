@@ -16,17 +16,6 @@ include 'debuggeri.php';
 include 'tietokantarutiinit.php';
 register_shutdown_function('debuggeri_shutdown');
 
-// Yhteysmuuttujat
-$servername = "localhost";
-$username = "root";  // Käyttäjätunnus
-$password = "";      // Salasana
-$dbname = "projektitori";  // Tietokannan nimi
-
-// Yhdistä tietokantaan
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Yhteyden muodostaminen epäonnistui: " . $conn->connect_error);
-}
 
 // Tarkista lomake ja käsittele syöte
 $project_name = isset($_GET['project_name']) ? trim($_GET['project_name']) : '';
@@ -55,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 // Hae kategoriat
 $sql = "SELECT category_id, category_name FROM categories";
-$result = $conn->query($sql);
+$result = $yhteys->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -77,7 +66,7 @@ if (isset($_GET['project_name']) && !empty($project_name) && isset($_GET['catego
             LEFT JOIN categories c ON pc.category_id = c.category_id
             WHERE p.project_name LIKE ?";
 
-    $stmt = $conn->prepare($sql);
+    $stmt = $yhteys->prepare($sql);
     $searchTerm = "%" . $project_name . "%";
     $stmt->bind_param("s", $searchTerm);
     $stmt->execute();
@@ -89,7 +78,7 @@ if (isset($_GET['project_name']) && !empty($project_name) && isset($_GET['catego
             LEFT JOIN categories c ON pc.category_id = c.category_id
             WHERE c.category_id = ?";
 
-    $stmt = $conn->prepare($sql);
+    $stmt = $yhteys->prepare($sql);
     $stmt->bind_param("i", $category_id);
     $stmt->execute();
 } elseif (isset($_GET['show_all'])) {
@@ -99,7 +88,7 @@ if (isset($_GET['project_name']) && !empty($project_name) && isset($_GET['catego
             LEFT JOIN project_categories pc ON p.project_id = pc.project_id
             LEFT JOIN categories c ON pc.category_id = c.category_id";
 
-    $stmt = $conn->prepare($sql);
+    $stmt = $yhteys->prepare($sql);
     $stmt->execute();
 } else {
     // Näytä oletuksena kaikki projektit, jos mitään hakukriteeriä ei ole annettu
@@ -108,7 +97,7 @@ if (isset($_GET['project_name']) && !empty($project_name) && isset($_GET['catego
             LEFT JOIN project_categories pc ON p.project_id = pc.project_id
             LEFT JOIN categories c ON pc.category_id = c.category_id";
 
-    $stmt = $conn->prepare($sql);
+    $stmt = $yhteys->prepare($sql);
     $stmt->execute();
 }
 
@@ -139,7 +128,7 @@ if ($stmt) {
 if ($stmt) {
     $stmt->close();
 }
-$conn->close();
+$yhteys->close();
 ?>
 
 <!DOCTYPE html>
