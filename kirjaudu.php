@@ -20,8 +20,13 @@ if (!session_id()) session_start();
 // Tarkistetaan onko käyttäjä kirjautunut sisään
 if (isset($_SESSION['user_id'])) {
     // Jos ei ole kirjautunut, ohjataan kirjautumissivulle
-    header("Location: kirjauduulos.php");
-    exit();
+    if (strpos($_SERVER['HTTP_HOST'],"azurewebsites") !== false){
+        header("Location: https://lisovskajair-dpg9bxf9awh8cae5.westeurope-01.azurewebsites.net/kirjauduulos.php");
+        exit();
+    } else {
+        header("Location: kirjauduulos.php");
+        exit();
+    }
 }
 
 // Tarkista, onko lomake lähetetty
