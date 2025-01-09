@@ -4,7 +4,16 @@ if (!session_id()) session_start();
 ?>
 
 <head>
-  <meta name="description" content="Webpage description goes here">
+  <!--meta name="description" content="Webpage description goes here"-->
+  <?php
+    if (isset($description) && !empty($description)) {
+        // Jos $description on asetettu ja ei ole tyhjä
+        echo '<meta name="description" content="' . htmlspecialchars($description) . '">';
+    } else {
+        // Jos $description ei ole asetettu tai on tyhjä
+        echo '<meta name="description" content="Projektitori yhdistää opiskelijat ja projektien tarjoajat. Löydä projekteja ohjelmoinnista, web-kehityksestä ja suunnittelusta.">';
+    }
+  ?>
   <meta charset="utf-8"> 
   
   <title><?= $title; ?></title>

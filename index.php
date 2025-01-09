@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fi">
 <?php 
-    $title = "Etusivu - Projektitori";
+    $title = "Projektitori - Löydä opiskelijaprojekteja ja kehitä taitojasi";
+    $descritpion = "Projektitori yhdistää opiskelijat ja projektien tarjoajat. Löydä projekteja ohjelmoinnista, web-kehityksestä ja suunnittelusta.";
     include 'head.php'; 
 ?>
 <body class="frontpage">
