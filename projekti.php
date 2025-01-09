@@ -26,18 +26,18 @@ if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'student') {
     $password = "";      // Vaihda salasanaan
     $dbname = "projektitori";  // Oikea tietokanta
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $yhteys = new mysqli($servername, $username, $password, $dbname);
 
     // Tarkista yhteys
-    if ($conn->connect_error) {
-        die("Yhteyden muodostaminen epäonnistui: " . $conn->connect_error);
+    if ($yhteys->connect_error) {
+        die("Yhteyden muodostaminen epäonnistui: " . $yhteys->connect_error);
     }
 
     // Tarkistetaan, onko opiskelija jo lähettänyt hakemuksen
     $student_id = $_SESSION['user_id'];
     $project_id = $_GET['projekti'];
     $check_application_sql = "SELECT * FROM applications WHERE student_id = ? AND project_id = ?";
-    $stmt_check = $conn->prepare($check_application_sql);
+    $stmt_check = $yhteys->prepare($check_application_sql);
     $stmt_check->bind_param("ii", $student_id, $project_id);
     $stmt_check->execute();
     $check_result = $stmt_check->get_result();
@@ -48,7 +48,7 @@ if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'student') {
     }
 
     // Sulje yhteys
-    $conn->close();
+    $yhteys->close();
 }
 
 
@@ -84,11 +84,11 @@ if (isset($_GET['projekti'])) {
     $password = "";      // Vaihda salasanaan
     $dbname = "projektitori";  // Oikea tietokanta
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $yhteys = new mysqli($servername, $username, $password, $dbname);
 
     // Tarkista yhteys
-    if ($conn->connect_error) {
-        die("Yhteyden muodostaminen epäonnistui: " . $conn->connect_error);
+    if ($yhteys->connect_error) {
+        die("Yhteyden muodostaminen epäonnistui: " . $yhteys->connect_error);
     }
 
     // Hae projektin tiedot
@@ -100,7 +100,7 @@ if (isset($_GET['projekti'])) {
         WHERE p.project_id = ?
     ";
 
-    $stmt = $conn->prepare($sql);
+    $stmt = $yhteys->prepare($sql);
     $stmt->bind_param("i", $project_id);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -120,7 +120,7 @@ if (isset($_GET['projekti'])) {
                               FROM applications a
                               JOIN users u ON a.student_id = u.user_id
                               WHERE a.project_id = ?";
-        $stmt_applications = $conn->prepare($applications_sql);
+        $stmt_applications = $yhteys->prepare($applications_sql);
         $stmt_applications->bind_param("i", $project_id);
         $stmt_applications->execute();
         $app_result = $stmt_applications->get_result();
@@ -132,7 +132,7 @@ if (isset($_GET['projekti'])) {
 
 
     // Sulje yhteys
-    $conn->close();
+    $yhteys->close();
 } else {
     echo "<p>Projektia ei valittu.</p>";
     exit;
