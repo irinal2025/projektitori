@@ -21,7 +21,7 @@
 
         <h3>Käyttöohjeet:</h3>
         <ul>
-            <li><strong>Rekisteröityminen:</strong> Katso ohjeet <a href="rekisteroidy.html">tästä</a>.</li>
+            <li><strong>Rekisteröityminen:</strong> Katso ohjeet <a href="rekisteroidy.php">tästä</a>.</li>
             <li><strong>Projektien selaaminen:</strong> Ohjeet kuinka voit löytää ja hakea projekteja.</li>
             <li><strong>Projektin lisääminen:</strong> Ohje projektin tarjoajille projektin lisäämiseksi sivustolle.</li>
         </ul>
