@@ -3,9 +3,13 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../../PHPMailer/src/Exception.php';
-require '../../PHPMailer/src/PHPMailer.php';
-require '../../PHPMailer/src/SMTP.php';
+//require '../../PHPMailer/src/Exception.php';
+//require '../../PHPMailer/src/PHPMailer.php';
+//require '../../PHPMailer/src/SMTP.php';
+
+require 'external/Exception.php';
+require 'external/PHPMailer.php';
+require 'external/SMTP.php';
 
 $output = '';
 
@@ -229,7 +233,12 @@ CREATE TABLE users (
                 $mail->addAddress($_POST['email']);                   // Vastaanottajan osoite
 
                 // Sähköpostiviestin sisältö
-                $verify_url = "http://yourdomain.com/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
+                //$verify_url = "http://yourdomain.com/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
+                if (strpos($_SERVER['HTTP_HOST'],"azurewebsites") !== false){
+                $verify_url = "https://lisovskajair-dpg9bxf9awh8cae5.westeurope-01.azurewebsites.net/projektitori/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
+                }  else {
+                    $verify_url = "http://localhost/projektitori/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
+                }
                 $mail->isHTML(true);                                  // Asetetaan HTML viestin tyypiksi
                 $mail->Subject = 'Vahvista sähköpostiosoitteesi';
                 $mail->Body    = 'Klikkaa tätä linkkiä vahvistaaksesi sähköpostisi: <a href="' . $verify_url . '">Vahvista sähköposti</a>';
