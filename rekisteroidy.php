@@ -235,9 +235,9 @@ CREATE TABLE users (
                 // Sähköpostiviestin sisältö
                 //$verify_url = "http://yourdomain.com/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
                 if (strpos($_SERVER['HTTP_HOST'],"azurewebsites") !== false){
-                $verify_url = "https://lisovskajair-dpg9bxf9awh8cae5.westeurope-01.azurewebsites.net/projektitori/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
+                $verify_url = "https://lisovskajair-dpg9bxf9awh8cae5.westeurope-01.azurewebsites.net/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
                 }  else {
-                    $verify_url = "http://localhost/projektitori/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
+                    $verify_url = "http://yourdomain.com/projektitori/vahvistus.php?token=" . $verification_token . "&email=" . urlencode($_POST['email']);
                 }
                 $mail->isHTML(true);                                  // Asetetaan HTML viestin tyypiksi
                 $mail->Subject = 'Vahvista sähköpostiosoitteesi';
