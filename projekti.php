@@ -21,12 +21,17 @@ if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'student') {
     $outputText = "Hae tätä projektia";
 
     // Yhdistetään tietokantaan ja tarkistetaan hakemukset
-    $servername = "localhost";
-    $username = "root";  // Vaihda käyttäjätunnukseen
-    $password = "";      // Vaihda salasanaan
-    $dbname = "projektitori";  // Oikea tietokanta
+    //$servername = "localhost";
+    //$username = "root";  // Vaihda käyttäjätunnukseen
+    //$password = "";      // Vaihda salasanaan
+    //$dbname = "projektitori";  // Oikea tietokanta
 
-    $yhteys = new mysqli($servername, $username, $password, $dbname);
+    //$yhteys = new mysqli($servername, $username, $password, $dbname);
+
+    $tietokanta = "projektitori";
+    include 'debuggeri.php';
+    include 'tietokantarutiinit.php';
+    register_shutdown_function('debuggeri_shutdown'); 
 
     // Tarkista yhteys
     if ($yhteys->connect_error) {
@@ -67,8 +72,12 @@ if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'provider') {
 //TÄMÄ ON KESKEN
 //$outputText = "Hae tätä projektia";
 
-$tietokanta = "projektitori";
-include 'debuggeri.php';
+// Tietokantayhteys
+//$tietokanta = "projektitori";
+//include 'debuggeri.php';
+//include 'tietokantarutiinit.php';
+//register_shutdown_function('debuggeri_shutdown'); 
+
 
 
 // Tarkista, onko project_id asetettu
@@ -79,12 +88,17 @@ if (isset($_GET['projekti'])) {
     }
 
     // Yhdistä tietokantaan
-    $servername = "localhost";
-    $username = "root";  // Vaihda käyttäjätunnukseen
-    $password = "";      // Vaihda salasanaan
-    $dbname = "projektitori";  // Oikea tietokanta
+    //$servername = "localhost";
+    //$username = "root";  // Vaihda käyttäjätunnukseen
+    //$password = "";      // Vaihda salasanaan
+    //$dbname = "projektitori";  // Oikea tietokanta
 
-    $yhteys = new mysqli($servername, $username, $password, $dbname);
+    //$yhteys = new mysqli($servername, $username, $password, $dbname);
+
+    $tietokanta = "projektitori";
+    include 'debuggeri.php';
+    include 'tietokantarutiinit.php';
+    register_shutdown_function('debuggeri_shutdown'); 
 
     // Tarkista yhteys
     if ($yhteys->connect_error) {
