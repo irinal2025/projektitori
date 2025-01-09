@@ -28,7 +28,7 @@
         <h2>Kuinka aloittaa?</h2>
         <p>Projektin tarjoajana voit helposti lisätä oman projektisi Projektitoriin seuraavien vaiheiden kautta:</p>
         <ul>
-            <li><strong>Rekisteröidy:</strong> Luo käyttäjätili täyttämällä rekisteröintilomake <a href="rekisteroidy.html">täällä</a>.</li>
+            <li><strong>Rekisteröidy:</strong> Luo käyttäjätili täyttämällä rekisteröintilomake <a href="rekisteroidy.php">täällä</a>.</li>
             <li><strong>Lisää projekti:</strong> Täytä projektin tiedot, kuten kuvaus, aikataulu, vaadittavat taidot ja budjetti, ja julkaise projekti opiskelijoiden haettavaksi.</li>
             <li><strong>Valitse hakijat:</strong> Kun opiskelijat ovat hakeneet projektiisi, voit käydä läpi heidän profiilinsa ja valita sopivat ehdokkaat toteuttamaan projektin.</li>
         </ul>

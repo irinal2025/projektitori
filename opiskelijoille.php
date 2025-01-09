@@ -28,7 +28,7 @@
         <h2>Kuinka aloittaa?</h2>
         <p>Seuraamalla näitä yksinkertaisia ohjeita pääset alkuun Projektitorissa:</p>
         <ul>
-            <li><strong>Rekisteröidy:</strong> Luo käyttäjätili täyttämällä rekisteröintilomake <a href="rekisteroidy.html">täällä</a>.</li>
+            <li><strong>Rekisteröidy:</strong> Luo käyttäjätili täyttämällä rekisteröintilomake <a href="rekisteroidy.php">täällä</a>.</li>
             <li><strong>Selaa projekteja:</strong> Käytä projektihakua löytääksesi sinulle sopivia projekteja. Voit suodattaa projekteja osaamisalueittain ja kiinnostuksen kohteittesi mukaan.</li>
             <li><strong>Hae projektiin:</strong> Kun löydät kiinnostavan projektin, lähetä hakemus ja odota yhteydenottoa projektin tarjoajalta.</li>
         </ul>
