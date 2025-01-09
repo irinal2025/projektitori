@@ -1,5 +1,5 @@
 <nav class="topnav"  id="myTopnav">
-    <a href="/projektit_PHP/projektitori/" class="nav-frontpage-link">🅟🅡🅞🅙🅔🅚🅣🅘ⓉⓄⓇⒾ</a>
+    <a href="/" class="nav-frontpage-link">🅟🅡🅞🅙🅔🅚🅣🅘ⓉⓄⓇⒾ</a>
     <!--a href="#">Etusivu</a-->
     <a href="projektit.php">Projektit</a>
     <a href="opiskelijoille.php">Opiskelijoille</a>
