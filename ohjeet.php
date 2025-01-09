@@ -41,7 +41,7 @@
     <section class="faq">
         <h2>Usein kysytyt kysymykset (FAQ)</h2>
         <h3>1. Kuinka rekisteröidyn Projektitoriin?</h3>
-        <p>Voit rekisteröityä täyttämällä rekisteröintilomakkeen <a href="rekisteroidy.html">täällä</a>. Tarvitset vain toimivan sähköpostiosoitteen ja perustiedot.</p>
+        <p>Voit rekisteröityä täyttämällä rekisteröintilomakkeen <a href="rekisteroidy.php">täällä</a>. Tarvitset vain toimivan sähköpostiosoitteen ja perustiedot.</p>
 
         <h3>2. Miten voin hakea projektia?</h3>
         <p>Käyttäjät voivat selata ja hakea projekteja kirjautumalla sisään ja navigoimalla projektien hakusivulle. Valitse projekti, lue tarkemmat tiedot ja lähetä hakemuksesi.</p>
