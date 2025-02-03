@@ -120,3 +120,5 @@ It showcases my ability to create functional web applications with user authenti
 Projektitori on kehityksessä oleva projekti, joka on tällä hetkellä toiminnassa ja sisältää kaikki tärkeimmät ominaisuudet, kuten käyttäjätunnistuksen luonti ja projektien haku. Vaikka sovellus on käyttökelpoinen, se ei ole vielä täysin valmis, ja siinä voi olla vielä parannettavaa ja optimointia.
 
 Tällä hetkellä en suunnittele aktiivista jatkokehitystä, mutta projekti on avoin mahdollisille muutoksille ja parannuksille. Jos sinulla on ideoita tai ehdotuksia, otan mielelläni vastaan palautetta ja keskustelua projektin kehittämisestä.
+
+© 2025 I.L. Kaikki oikeudet pidätetään. Tämä on opiskeluprojekti, jonka lähdekoodi on nähtävillä, mutta sen käyttö, kopiointi, muokkaaminen tai konseptin hyödyntäminen ilman lupaa on kielletty.
